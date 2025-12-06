@@ -42,6 +42,18 @@ export const theme: MantineThemeOverride = createTheme({
       '#121415', // 8
       '#090a0a', // 9
     ],
+    dark: [
+      '#e0e0e0', // 0 - text primary (off-white)
+      '#a6a6a6', // 1 - text secondary
+      '#5c5c5c', // 2 - borders/subtle elements
+      '#3a3a3a', // 3 - hover states
+      '#2c2c2c', // 4 - surface (cards/panels)
+      '#242424', // 5 - background secondary
+      '#1e1e1e', // 6 - background primary
+      '#181818', // 7 - background darker
+      '#121212', // 8 - background darkest
+      '#0a0a0a', // 9 - near black
+    ],
   },
 
   // Typography
@@ -124,7 +136,7 @@ export const theme: MantineThemeOverride = createTheme({
       },
       styles: {
         root: {
-          border: '1px solid #e0e0e0',
+          transition: 'border-color 200ms ease, background-color 200ms ease',
         },
       },
     },

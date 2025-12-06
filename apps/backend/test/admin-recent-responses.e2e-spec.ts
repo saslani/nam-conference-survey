@@ -24,7 +24,7 @@ describe('Admin Recent Responses (e2e)', () => {
   });
 
   beforeEach(async () => {
-    // Clean up database before each test
+    // Clean up database before each test using DELETE to avoid deadlocks with concurrent test runs
     await prisma.surveyResponse.deleteMany({});
     await prisma.user.deleteMany({});
   });

@@ -1,16 +1,21 @@
-import { Container, Stack, Title, Text, Button, Image, Card } from '@mantine/core';
+import { Container, Stack, Title, Text, Button, Image, Card, Box } from '@mantine/core';
+import { ThemeToggle } from '../components/ThemeToggle';
 
 export default function ThankYouPage() {
   return (
     <Container size="sm" py="xl">
       <Card shadow="md" padding="xl" radius="md" withBorder>
-        <Stack align="center" gap="xl">
-          <Image
-            src="https://www.equalexperts.com/wp-content/uploads/2024/10/2024-Logo.svg"
-            alt="Equal Experts"
-            h={60}
-            w="auto"
-          />
+        <Box pos="relative">
+          <Box pos="absolute" right={-8} top={-8}>
+            <ThemeToggle />
+          </Box>
+          <Stack align="center" gap="xl">
+            <Image
+              src="https://www.equalexperts.com/wp-content/uploads/2024/10/2024-Logo.svg"
+              alt="Equal Experts"
+              h={60}
+              w="auto"
+            />
 
           <Title order={1} ta="center" c="equalBlue.4">
             Thank You!
@@ -34,7 +39,8 @@ export default function ThankYouPage() {
           >
             Return to Equal Experts
           </Button>
-        </Stack>
+          </Stack>
+        </Box>
       </Card>
     </Container>
   );
